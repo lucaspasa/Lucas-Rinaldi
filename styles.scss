@@ -132,7 +132,7 @@ body {
 
         .image-container {
             overflow: hidden;
-            width: 50%;
+            min-width: 50%;
             max-height: 30vh;
             img{
                 width: 30vw;
