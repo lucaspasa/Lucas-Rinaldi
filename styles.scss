@@ -4,6 +4,7 @@ $cream: #eeddcc;
 $blue: #5e6d86;
 $grey: #bcaaaa;
 $tan: #f1cca6;
+$red: rgb(194, 78, 78);
 $font1: 'Lato', sans-serif;
 $font2: 'Roboto Slab', serif;
 $font3: 'Noto Serif', serif;
@@ -17,7 +18,7 @@ body {
     background-color: white;
     
     font-family: $font1;
-    overflow: hidden;
+    overflow-x: hidden;
 
     h1{
         font-family: $font1;
@@ -30,6 +31,11 @@ body {
         color: black;
         color: white;
     }
+}
+
+.contain {
+    overflow: hidden;
+    width: 10vw;
 }
 
 .header {
@@ -74,7 +80,7 @@ body {
                 right: 100%;
                 width: 50%;
                 height: 2px;
-                background: $green;
+                background: $blue;
                 transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
             }
 
@@ -85,14 +91,16 @@ body {
                 left: 100%;
                 width: 50%;
                 height: 2px;
-                background: $green;
+                background: $blue;
                 transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
             }
             a:hover{
-                color: $green2;
+                color: $tan;
+                font-weight: 800;
                 // align-self: flex-start;
                 text-shadow: 0px 0px 1px $grey;
                 // font-weight: 600;
+                transition: .3s;
             }
 
             a:hover:before{
@@ -116,7 +124,7 @@ body {
     height: 100vh;
     img{
         height: 100vh;
-        min-width: 100%;
+        min-width: 99.1vw;
         overflow: hidden;
         filter: blur(3px);
         filter: brightness(75%);
@@ -141,16 +149,136 @@ body {
             width: fit-content;
             // margin-top: 25%;
             // margin-left: 15%;
-            color: white;
+            color: black;
             margin: auto;
             padding: 0 2em;
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-top: 30vh;
-            background-color: $green;
+            background-color: $tan;
              font-family: $font2;
+             box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.61);
+             .web{
+                 color: rgb(194, 78, 78)
+             }
+             .mus{
+                 color: $blue;
+             }
+             .invent{
+                 color: $green;
+             }
         }
+    }
+}
+
+.button{
+    position: absolute;
+    margin: 0 44%;
+    top: 40vh;
+    // border: 2px solid red;
+    height: 120px;
+    width: 100px;
+
+    .aboutme{
+        position: absolute;
+        left: 8px;
+
+    }
+   
+    .arrow{
+        
+        .both{
+            background-color: $tan;
+            width: 4em;
+            height: .5em;
+            z-index: 3;
+            position: absolute;
+        }
+        .left{
+            right: 38px;
+            transform: rotate(45deg);
+        }
+        .right{
+            left: 38px;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.button:hover{
+    .arrow{
+        margin-top: 100px;
+        // margin-bottom: 58px;
+        transition: .5s;
+    }
+}
+
+.button:not(:hover){
+    .arrow{
+        margin-top: 80px;
+        // margin-bottom: 58px;
+        transition: .5s;
+    }
+}
+
+#bio{
+    position: relative;
+    display: flex;
+    // border: 2px solid red;
+    margin-top: 55vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    
+
+    .skills-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        // border: 2px solid blue;
+        h2{
+            background-color: $tan;
+            color: $red;
+            font-size: 1.5em;
+            font-weight: 800;
+            padding: .5em 4em;
+        }
+        ul{
+
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            // justify-content: center;
+            // border: 2px dashed yellow;
+            // overflow: hidden;
+            // height: fit-content;
+            // text-align: center;
+            li{
+                background-color: black;
+                color: white;
+                padding: .5em 1em;
+                margin-bottom: 1em;
+                list-style-type: none;
+                // border: 2px solid green;
+                text-indent: 0;
+                margin-left: -2.5em;
+    
+            }
+        }
+        
+    }
+
+    .mini-bio{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        align-items: center;
+        padding: 0 5em;
+        line-height: 2em;
+        font-size: 1.2em;
     }
 }
 
