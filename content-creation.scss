@@ -12,6 +12,30 @@ $font3: 'Noto Serif', serif;
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+// body{
+//     overflow: hidden;
+//     z-index: 6;
+// }
+// #background{
+//     position: absolute;
+//     // z-index: -6;
+//     // width: 100%;
+//     // height: 100%;
+//     // // top: -90px;
+// }
+
+body{
+    background-color: $blue;
+}
+
+header{
+    color: white;
+
+    a{
+        color: white;
+    }
+}
+
 .fa {
     padding: 10px;
     font-size: 90px;
@@ -33,6 +57,13 @@ $font3: 'Noto Serif', serif;
   .project{
       display: flex;
       align-items: center;
+      h2{
+          font-size: 3em;
+          color: $blue;
+      }
+      p{
+          font-size: 1.3em;
+      }
       img{
           width: 25%;
           margin: 0 5%;
@@ -40,5 +71,26 @@ $font3: 'Noto Serif', serif;
       }
       .info{
           width: 75%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          p{
+              width: 75%;
+              text-align: center;
+          }
       }
+  }
+
+  .jof{
+      background-color: $green;
+      width: 100%;
+
+      h2{
+          color: $tan;
+      }
+  }
+
+  .citrus{
+      background-color: $tan;
+      width: 100%;
   }
