@@ -12,18 +12,21 @@ $font3: 'Noto Serif', serif;
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-::-webkit-scrollbar{
-    width: 1em;
-}
-::-webkit-scrollbar-track {
-    background-color: $green;
-    // border-radius: 100vw;
-}
 
-::-webkit-scrollbar-thumb{
-    background-color: $blue;
-}
 
+@media only screen and (min-width: 500px){
+    ::-webkit-scrollbar{
+        width: 1em;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: $green;
+        // border-radius: 100vw;
+    }
+    
+    ::-webkit-scrollbar-thumb{
+        background-color: $blue;
+    }
+    
 body {
     margin: 0;
     // margin-top: -2%;
@@ -296,6 +299,8 @@ body {
         font-size: 1.2em;
     }
 }
+}
+
 
 
 @media only screen and (max-width: 1600px) {
@@ -306,4 +311,6 @@ body {
           margin-top: 0;
       }
     }
+
+    
   }

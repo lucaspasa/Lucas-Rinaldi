@@ -6,32 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/header-styles.css"> 
     <link rel="stylesheet" href="/css/styles.css"> 
+    <link rel="stylesheet" href="/css/mobile-styles.css"> 
     <link rel="icon" href="media/logo2.png">
     <title>Lucas Rinaldi</title>
 </head>
 <body>
     <div class="conatain">
         <div class="image-absolute">
-            <img src="media/me2.jpg" alt="Lucas in a mountain valley">
+            <img id="imageAbsolute" src="media/me2.jpg" alt="Lucas in a mountain valley">
         </div>
     </div>
-    <header>
-        <div class="container header">
-    
+    <header class="container">
+        <div class="header">
+            
             <div class="title">
-                <a href="index.html"><h1>Lucas Rinaldi</h1></a>
-            </div>
-    
-            <nav>
-                <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="li2"><a href="projects.html">Web Projects</a></li>
-                    <li><a href="content-creation.html">Other Creations</a></li>
+                <a href="index.html"><h1 id="title">Lucas Rinaldi</h1></a>
+                <div id="hamburger-button" class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
 
+            </div>
+            <nav class="desktop-nav">
+                <ul id="menu" class="menu">
+                    <li class="list-item"><a href="index.html">Home</a></li>
+                    <li class=" list-item li2"><a href="projects.html">Web Projects</a></li>
+                    <li class="list-item"><a href="content-creation.html">Content</a></li>
+        
                 </ul>
             </nav>
         </div>
     </header>
+    <nav class="mobile-nav">
+        <ul id="menuM" class="menu">
+            <li class="list-item"><a href="index.html">Home</a></li>
+            <li class=" list-item li2"><a href="projects.html">Web Projects</a></li>
+            <li class="list-item"><a href="content-creation.html">Content</a></li>
+
+        </ul>
+    </nav>
     <main class="content container">
         <section class="section1 container">
             <article class="about">
@@ -39,13 +53,15 @@
             </article>
         </section>
 
-        <a href="#bio">
+        <a href="#" id="button">
             <div class="button">
-                <h3 class="aboutme">About Me</h3>
-                <div class="arrow">
-                    <div class="left both"></div>
-                    <div class="right both"></div>
-                </div>
+                <a href="#bio">
+                    <h3 class="aboutme">About Me</h3>
+                    <div class="arrow">
+                        <div class="left both"></div>
+                        <div class="right both"></div>
+                    </div>
+                </a>
             </div>
         </a>
 
@@ -54,17 +70,25 @@
                 <h2 class="skills-title">
                     Skills
                 </h2>
-                <div>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS</li>
-                        <li>SASS</li>
-                        <li>JavaScript</li>
-                        <li>GitHub</li>
-                        <li>Git</li>
-                        <li>Photoshop</li>
-                        <li>Pro Tools</li>
-                        <li>Premiere Pro</li>
+                <div class="skillstainer">
+                    <ul class="skills">
+                        <div class="line-1">
+                            <li>HTML5</li>
+                            <li>CSS</li>
+                            <li>SASS</li>
+                        </div>
+                        <div class="line-2">
+                            <li>JavaScript</li>
+                            <li>GitHub</li>
+                            <li>Git</li>
+                        </div>
+                        <div class="line-3">
+                            <li>Pro Tools</li>
+                            <li>Premiere Pro</li>
+                            <li>Photoshop</li>
+
+                            <!-- <li>Interpersonal</li> -->
+                        </div>
                     </ul>
                 </div>
             </aside>
@@ -80,6 +104,42 @@
             </article>
         </section>
     </main>
-    
+    <script>
+        const hamburger = document.getElementById("hamburger-button");
+        let swatch = false;
+
+        hamburger.addEventListener("click", function(e){
+            console.log("test");
+            
+            if(swatch == false){
+                swatch = true;
+                menuM.style.top = "0";
+                menuM.style.transition = "1s ease"
+                hamburger.style.transform = "rotate(90deg)";
+                // hamburger.style.backgroundColor = "red"
+                hamburger.style.transition = ".4s ease-out";
+                imageAbsolute.style.filter = "blur(3px)";
+                // imageAbsolute.style.opacity = ".7";
+                imageAbsolute.style.transition = "1s ease";
+                // title.style.filter = "blur(2px)";
+                // title.style.opacity = ".7";
+                // title.style.transition = "1s ease";
+
+            } else {
+                menuM.style.top = "-50%";
+                hamburger.style.transform = "rotate(0deg)";
+                hamburger.style.transition = ".4s ease-out";
+                imageAbsolute.style.filter = "blur(0px)";
+                imageAbsolute.style.transition = "1s ease";
+                imageAbsolute.style.opacity = "1";
+                // title.style.filter = "blur(0px)";
+                // title.style.opacity = "1";
+                // title.style.transition = "1s ease";
+
+                swatch = false;
+            }
+            
+        })
+    </script>
 </body>
 </html>
