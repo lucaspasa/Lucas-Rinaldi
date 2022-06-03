@@ -18,10 +18,15 @@
         <div class="container header">
     
             <div class="title">
-                <a href="index.html"><h1>Lucas Rinaldi</h1></a>
+                <a href="index.html"><h1 id="lucas">Lucas Rinaldi</h1></a>
+                <div id="hamburger-button" class="hamburger">
+                    <div class="borgar"></div>
+                    <div class="borgar"></div>
+                    <div class="borgar"></div>
+                </div>
             </div>
     
-            <nav>
+            <nav class="desktop-nav">
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li>
                     <li class="li2"><a href="projects.html">Web Projects</a></li>
@@ -32,8 +37,16 @@
         <h1 class="container head-title">Content Creations</h1>
         <div class="line"></div>
     </header>
+    <nav class="mobile-nav">
+        <ul id="menuM" class="menu">
+            <li class="list-item"><a href="index.html">Home</a></li>
+            <li class=" list-item li2"><a href="projects.html">Web Projects</a></li>
+            <li class="list-item"><a href="content-creation.html">Content</a></li>
+
+        </ul>
+    </nav>
     <main>
-        <section>
+        <section class="projects">
             <div class="citrus">
                 <div class="container project">
                     <img src="media/citrus.png" alt="Citrus Maxima logo, fruit with Citrus Maxima spelled in a groovey font">
@@ -71,5 +84,34 @@
             </div>
         </section>
     </main>
+    <script>
+        const hamburger = document.getElementById("hamburger-button");
+        const borgar = document.getElementsByClassName("borgar");
+        let swatch = false;
+
+        hamburger.addEventListener("click", function(e){
+            console.log("test");
+            
+            if(swatch == false){
+                swatch = true;
+                menuM.style.top = "0";
+                menuM.style.transition = "1s ease"
+                hamburger.style.transform = "rotate(90deg)";
+                hamburger.style.transition = ".4s ease-out";
+                borgar.style.backgroundColor = "black";
+                lucas.style.color = "black";
+            } else {
+                menuM.style.top = "-50%";
+                hamburger.style.transform = "rotate(0deg)";
+                hamburger.style.transition = ".4s ease-out";
+                lucas.style.color = "white";
+
+
+                swatch = false;
+            }
+            
+        })
+    </script>
 </body>
+
 </html>
