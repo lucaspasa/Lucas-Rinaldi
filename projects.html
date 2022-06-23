@@ -14,10 +14,17 @@
         <div class="container header">
     
             <div class="title">
-                <a href="index.html"><h1>Lucas Rinaldi</h1></a>
+                <a href="index.html"><h1 id="lucas">Lucas Rinaldi</h1></a>
+                <!-- MOBILE NAV HAMBURGER BUTTON  -->
+                <div id="hamburger-button" class="hamburger">
+                    <div id="borgar1" class="borgar"></div>
+                    <div id="borgar2" class="borgar"></div>
+                    <div id="borgar3" class="borgar"></div>
+                </div>
             </div>
     
-            <nav>
+            <!-- DESKTOP ONLY NAV MENU  -->
+            <nav class="desktop-nav">
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li>
                     <li class="li2"><a href="projects.html">Web Projects</a></li>
@@ -29,9 +36,21 @@
         <h1 class="container head-title">Web Projects</h1>
         <div class="line"></div>
     </header>
+
+    <!-- MOBILE DROPDOWN MENU  -->
+    <nav class="mobile-nav">
+        <ul id="menuM" class="menu">
+            <li class="list-item"><a href="index.html">Home</a></li>
+            <li class=" list-item li2"><a href="projects.html">Web Projects</a></li>
+            <li class="list-item"><a href="content-creation.html">Content</a></li>
+
+        </ul>
+    </nav>
     <main>
         
+        <!-- MAIN CONTENT  -->
         <section class="cards container">
+            <!-- PROJECT ONE  -->
             <div class="card">
                 <img src="media/rock-city.png" alt="">
                 <h2>Rock City Road Recording Studio</h2>
@@ -44,6 +63,7 @@
                     <a target="_blank" href="https://github.com/lucaspasa/Rock-City-Recording"><div>View Code ></div></a>
                 </div>
             </div>
+            <!-- PROJECT TWO  -->
             <div class="card">
                 <img src="media/hell.png" alt="">
                 <h2>Devillo's Playground</h2>
@@ -58,6 +78,68 @@
             </div>
         </section>
     </main>
+    <!-- FOOTER  -->
+    <footer class="foot">
+        <ul>
+            <a href="mailto:lucasrinaldi1@gmail.com">
+                <li>Get in Touch</li>
+            </a>
+            <a href="media/resume.pdf" download="newfilename">
+                <li>Resume</li>
+            </a>
+        </ul>
+
+    </footer>
     
 </body>
+<script>
+    // assign variables 
+    const hamburger = document.getElementById("hamburger-button");
+    const borgar = document.getElementsByClassName("borgar");
+    let swatch = false;
+    
+    // event listener 
+    hamburger.addEventListener("click", function(e){
+        console.log("test");
+        
+        // on off switch for hamburger menu dropdown
+        if(swatch == false){
+            // flip switch
+            swatch = true;
+
+            // make menu appear
+            menuM.style.top = "0";
+            menuM.style.transition = "1s ease"
+            // rotate and color the hamburger 
+            hamburger.style.transform = "rotate(90deg)";
+            hamburger.style.transition = ".4s ease-out";
+            borgar1.style.backgroundColor = "black";
+            borgar2.style.backgroundColor = "black";
+            borgar3.style.backgroundColor = "black";
+            borgar1.style.transition = ".4s ease-in";
+            borgar2.style.transition = ".4s ease-in";
+            borgar3.style.transition = ".4s ease-in";
+             // change title color 
+            lucas.style.color = "black";
+            lucas.style.transition = ".4s ease-in";
+            
+            console.log("hi") //test code to console
+        } else {
+             // hide menu
+            menuM.style.top = "-50%";
+            //roate and recolor hamburger
+            hamburger.style.transform = "rotate(0deg)";
+            hamburger.style.transition = ".4s ease-out";
+            borgar1.style.backgroundColor = "white";
+            borgar2.style.backgroundColor = "white";
+            borgar3.style.backgroundColor = "white";
+            lucas.style.color = "white";
+            
+
+            // flip switch
+            swatch = false;
+        }
+        
+    })
+</script>
 </html>

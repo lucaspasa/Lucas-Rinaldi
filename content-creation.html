@@ -10,22 +10,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Lucas Rinaldi</title>
     <script src="https://kit.fontawesome.com/6682d901db.js" crossorigin="anonymous"></script>
-
 </head>
+
 <body>
-    <!-- <img id="background" src="me1.jpg" alt=""> -->
     <header>
         <div class="container header">
     
             <div class="title">
                 <a href="index.html"><h1 id="lucas">Lucas Rinaldi</h1></a>
+
+                <!-- HAMBURGER BUTTON FOR MOBILE SITE  -->
                 <div id="hamburger-button" class="hamburger">
-                    <div class="borgar"></div>
-                    <div class="borgar"></div>
-                    <div class="borgar"></div>
+                    <div id="borgar1" class="borgar"></div>
+                    <div id="borgar2" class="borgar"></div>
+                    <div id="borgar3" class="borgar"></div>
                 </div>
             </div>
     
+            <!-- MENU FOR DESKTOP SITE  -->
             <nav class="desktop-nav">
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li>
@@ -37,6 +39,8 @@
         <h1 class="container head-title">Content Creations</h1>
         <div class="line"></div>
     </header>
+
+    <!-- DROP DOWN MENU FOR MOBILE SITE -->
     <nav class="mobile-nav">
         <ul id="menuM" class="menu">
             <li class="list-item"><a href="index.html">Home</a></li>
@@ -45,11 +49,13 @@
 
         </ul>
     </nav>
+
     <main>
         <section class="projects">
+            <!-- FIRST PROJECT  -->
             <div class="citrus">
                 <div class="container project">
-                    <img src="media/citrus.png" alt="Citrus Maxima logo, fruit with Citrus Maxima spelled in a groovey font">
+                    <img class="c-logo" src="media/citrus.png" alt="Citrus Maxima logo, fruit with Citrus Maxima spelled in a groovey font">
                     <div class="info">
                         <h2>Citrus Maxima</h2>
                         <div class="links">
@@ -65,10 +71,12 @@
                     </div>
                 </div>
             </div>
+
+            <!-- SECOND PROJECT  -->
             <div class="jof">
                 <div class="project container">
                     <div class="info">
-                        <h2>Just One Fern</h2>
+                        <h2>Just <span class="jof-one">One</span> <span class="jof-fern">Fern</span></h2>
                         <div class="links">
                             <a href="https://www.instagram.com/justonefern/" class="fa fa-instagram" target='_blank'></a>
                             <a href="https://open.spotify.com/show/3NCyVkr0NVnc7VHwgrmLYh" class="fa fa-spotify" target='_blank'></a>
@@ -79,34 +87,71 @@
                         <p>I am a cohost on the Just One Fern Podcast! We talk about music and joke about everyday things. Just a couple of buddies just hashing it out.
                              Occasionally we will have a guest on for an interview.</p>
                     </div>
-                    <img src="media/jof.png" alt="Just One Fern logo, a potted fern with the title written on the pot">
+                    <img class="jof-logo" src="media/jof.png" alt="Just One Fern logo, a potted fern with the title written on the pot">
                 </div>
             </div>
         </section>
     </main>
+    <footer class="foot">
+        <ul>
+            <!-- EMAIL ME  -->
+            <a href="mailto:lucasrinaldi1@gmail.com"> 
+                <li>Get in Touch</li>
+            </a>
+            <!-- DOWNLOAD MY RESUME  -->
+            <a href="media/resume.pdf" download="newfilename">
+                <li>Resume</li>
+            </a>
+        </ul>
+
+    </footer>
     <script>
+        // assign variables 
         const hamburger = document.getElementById("hamburger-button");
         const borgar = document.getElementsByClassName("borgar");
         let swatch = false;
+        
 
+        // event listener 
         hamburger.addEventListener("click", function(e){
             console.log("test");
             
+            // on off switch for hamburger menu dropdown 
             if(swatch == false){
+                // flip switch
                 swatch = true;
+
+                // make menu appear
                 menuM.style.top = "0";
                 menuM.style.transition = "1s ease"
+                // rotate and color the hamburger 
                 hamburger.style.transform = "rotate(90deg)";
                 hamburger.style.transition = ".4s ease-out";
-                borgar.style.backgroundColor = "black";
+                borgar1.style.backgroundColor = "black";
+                borgar2.style.backgroundColor = "black";
+                borgar3.style.backgroundColor = "black";
+                borgar1.style.transition = ".4s ease-in";
+                borgar2.style.transition = ".4s ease-in";
+                borgar3.style.transition = ".4s ease-in";
+                // change title color 
                 lucas.style.color = "black";
+                lucas.style.transition = ".4s ease-in";
+                
+                console.log("hi") // test code
             } else {
+                // hide menu
                 menuM.style.top = "-50%";
+                //roate and recolor hamburger
                 hamburger.style.transform = "rotate(0deg)";
                 hamburger.style.transition = ".4s ease-out";
+                borgar1.style.backgroundColor = "white";
+                borgar2.style.backgroundColor = "white";
+                borgar3.style.backgroundColor = "white";
+                // add back original title color
                 lucas.style.color = "white";
+                
 
-
+                // flip switch
                 swatch = false;
             }
             

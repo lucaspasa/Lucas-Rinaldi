@@ -11,16 +11,18 @@
     <title>Lucas Rinaldi</title>
 </head>
 <body>
+    <!-- BACKGROUND IMAGE  -->
     <div class="conatain">
         <div class="image-absolute">
-            <img id="imageAbsolute" src="media/me2.jpg" alt="Lucas in a mountain valley">
+            <img id="imageAbsolute" class="pic" src="media/me2.jpg" alt="Lucas in a mountain valley">
         </div>
     </div>
     <header class="container">
         <div class="header" id="header">
-            
+            <!-- TITLE  -->
             <div class="title">
                 <a href="index.html"><h1 id="title">Lucas Rinaldi</h1></a>
+                <!-- HAMBURGER BUTTON  -->
                 <div id="hamburger-button" class="hamburger">
                     <div></div>
                     <div></div>
@@ -28,6 +30,7 @@
                 </div>
 
             </div>
+            <!-- DESKTOP ONLY NAV MENU  -->
             <nav class="desktop-nav">
                 <ul id="menu" class="menu">
                     <li class="list-item"><a href="index.html">Home</a></li>
@@ -38,6 +41,7 @@
             </nav>
         </div>
     </header>  
+    <!-- MOBILE ONLY NAV MENU  -->
     <nav class="mobile-nav">
         <ul id="menuM" class="menu">
             <li class="list-item"><a href="index.html">Home</a></li>
@@ -46,6 +50,7 @@
 
         </ul>
     </nav>
+    <!-- CAPTION LANDING PAGE  -->
     <main class="content container">
         <section class="section1 container">
             <article class="about">
@@ -53,6 +58,7 @@
             </article>
         </section>
 
+        <!-- ABOUT ME BUTTON  -->
         <a href="#" id="button">
             <div class="button">
                 <a href="#bio">
@@ -65,6 +71,7 @@
             </div>
         </a>
 
+        <!-- SKILLS LIST  -->
         <section class="container" id="bio">
             <aside class="skills-container">
                 <h2 class="skills-title">
@@ -73,25 +80,24 @@
                 <div class="skillstainer">
                     <ul class="skills">
                         <div class="line-1">
-                            <li>HTML5</li>
-                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Premiere </li>
                             <li>SASS</li>
                         </div>
                         <div class="line-2">
-                            <li>JavaScript</li>
+                            <li>HTML5</li>
                             <li>GitHub</li>
                             <li>Git</li>
                         </div>
                         <div class="line-3">
                             <li>Pro Tools</li>
-                            <li>Premiere Pro</li>
+                            <li>CSS</li>
                             <li>Photoshop</li>
-
-                            <!-- <li>Interpersonal</li> -->
                         </div>
                     </ul>
                 </div>
             </aside>
+            <!-- ABOUT ME  -->
             <article class="mini-bio">
                 <h2 class="bio-title">I love to make stuff</h2>
                 <p>
@@ -109,30 +115,55 @@
             </article>
         </section>
     </main>
+    <footer class="foot">
+        <ul>
+            <!-- MY EMAIL  -->
+            <a href="mailto:lucasrinaldi1@gmail.com">
+                <li>Get in Touch</li>
+            </a>
+            <!-- DOWNLOAD MY RESUME  -->
+            <a href="media/resume.pdf" download="newfilename">
+                <li>Resume</li>
+            </a>
+        </ul>
+
+    </footer>
     <script>
+        // assign variables 
         const hamburger = document.getElementById("hamburger-button");
         let swatch = false;
 
+        // event listener 
         hamburger.addEventListener("click", function(e){
             console.log("test");
             
+            // on off switch for hamburger menu dropdown
             if(swatch == false){
+                // flip switch
                 swatch = true;
+
+                // make menu appear
                 menuM.style.top = "0";
                 menuM.style.transition = "1s ease"
+                // rotate the hamburger 
                 hamburger.style.transform = "rotate(90deg)";
                 hamburger.style.transition = ".4s ease-out";
+                // blur background
                 imageAbsolute.style.filter = "blur(3px)";
                 imageAbsolute.style.transition = "1s ease";
 
             } else {
+                 // hide menu
                 menuM.style.top = "-50%";
+                //roate hamburger
                 hamburger.style.transform = "rotate(0deg)";
                 hamburger.style.transition = ".4s ease-out";
+                //re-rotate the hamburger
                 imageAbsolute.style.filter = "blur(0px)";
                 imageAbsolute.style.transition = "1s ease";
                 imageAbsolute.style.opacity = "1";
                 
+                // flip switch
                 swatch = false;
             }
             
