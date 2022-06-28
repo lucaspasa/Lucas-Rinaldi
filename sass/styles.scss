@@ -103,7 +103,7 @@ $font3: 'Noto Serif', serif;
                     bottom: 0;
                     left: 100%;
                     width: 50%;
-                    height: 3px;
+                    height: 2px;
                     background: $blue;
                     transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
                 }
@@ -168,7 +168,7 @@ $font3: 'Noto Serif', serif;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: 30vh;
+                margin-top: 15vh;
                 margin-left: 28%;
                 background-color: $tan;
                 font-family: $font2;
@@ -189,7 +189,7 @@ $font3: 'Noto Serif', serif;
     .button{
         position: absolute;
         margin: 0 44%;
-        top: 30vh;
+        top: 35vh;
         // border: 2px solid red;
         height: 120px;
         width: 100px;
