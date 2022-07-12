@@ -130,15 +130,17 @@ $font3: 'Noto Serif', serif;
 
     .image-absolute {
         position: absolute;
-        margin-top: -2%;
+        margin: 0;
+        padding: 0;
+        top: 0;
         // left: 1/200px;
         min-width: 100%;
-        overflow: hidden;
+        overflow-x: hidden;
         height: 100vh;
         img{
             height: 100vh;
             min-width: 99.1vw;
-            overflow: hidden;
+            overflow-x: hidden;
             filter: blur(3px);
             filter: brightness(75%);
         }
