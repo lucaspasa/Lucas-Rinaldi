@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^([^\.]+)$ $1.html [NC, L]
+Options -Indexes
+sudo a2enmod rewrite 
+sudo systemctl restart apache2
+sudo vim /etc/apache2/sites-enabled/000-default.conf
+<Directory /var/www/html>
+    AllowOverride All
+ </Directory>
+ sudo service apache2 restart
