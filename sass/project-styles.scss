@@ -45,11 +45,16 @@ header{
     text-align: center;
     display: flex;
     justify-content: space-evenly;
+    height: auto;
+    width: 1000px;
+   .row{
     .card{
         border: 1px solid $green;
         width: 400px;
+        height: 450px;
         background-color: $cream;
         padding: 1em;
+        margin-bottom: 2em;
         border-radius: 1em;
         color: white;
          transition: .3s ease;
@@ -89,6 +94,7 @@ header{
             }
         }
     }
+   }
     .card:hover{
         box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.507);
         transition: .3s ease;
