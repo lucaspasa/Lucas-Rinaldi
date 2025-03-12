@@ -1,0 +1,1 @@
+This is the code to my personal web develpment portfolio. It has been quiet a journey with more stops and starts than I would have liked, but I have kept working at it in spite of lifes challenges. Here is some of my best work.
