@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@media only screen and (min-width: 500px) {
+  body {
+    background-color: #5e6d86;
+  }
+  body .mobile-nav {
+    visibility: hidden;
+  }
+  header {
+    color: whitesmoke;
+    margin-bottom: -3em;
+  }
+  header h1 {
+    color: whitesmoke;
+  }
+  header a {
+    color: whitesmoke;
+  }
+  .head-title {
+    text-align: center;
+    margin-top: -2em;
+  }
+  .cards {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: auto;
+    width: 1000px;
+  }
+  .cards .row .card {
+    border: 1px solid #8f8e6b;
+    width: 400px;
+    height: 450px;
+    background-color: #eeddcc;
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: 1em;
+    color: white;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .cards .row .card h2 {
+    color: rgb(194, 78, 78);
+    height: 5%;
+  }
+  .cards .row .card p {
+    color: #5e6d86;
+    height: 20%;
+  }
+  .cards .row .card img {
+    width: 95%;
+    height: 50%;
+    border-radius: 1em;
+  }
+  .cards .row .card .card-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 10%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100%;
+  }
+  .cards .row .card .card-buttons a {
+    width: 30%;
+    background-color: rgb(194, 78, 78);
+    font-weight: 700;
+    height: 80%;
+    padding: 0 0.7em;
+    padding-top: 0.7em;
+    padding-bottom: -0.3em;
+    border-radius: 10px 10px 10px 10px;
+    color: whitesmoke;
+  }
+  .cards .row .card .card-buttons a:hover {
+    opacity: 0.7;
+  }
+  .cards .card:hover {
+    -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.507);
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.507);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+}
+@media only screen and (max-width: 500px) {
+  .desktop-nav {
+    visibility: hidden;
+    margin-left: -500px;
+  }
+  body {
+    background-color: #5e6d86;
+  }
+  .mobile-nav .menu {
+    position: absolute;
+    top: -50%;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 37vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #eeddcc;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.404);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.404);
+  }
+  .mobile-nav .menu li {
+    font-size: 2em;
+    font-weight: 600;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+  .mobile-nav .menu li a {
+    margin: 0;
+    color: rgb(194, 78, 78);
+    padding: 0.5em;
+    border-radius: 20px 20px 20px 20px;
+    z-index: 90;
+  }
+  .mobile-nav .menu li a:hover {
+    opacity: 0.8;
+  }
+  header {
+    margin-top: 0px;
+    color: whitesmoke;
+    width: 100vw;
+  }
+  header .header {
+    margin-top: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 90vw;
+    margin: 0;
+  }
+  .title #lucas {
+    width: 66vw;
+  }
+  .title .hamburger {
+    height: 25px;
+    width: 25px;
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    z-index: 9;
+  }
+  .title .hamburger .borgar {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+  }
+  h1 {
+    color: whitesmoke;
+    width: 50%;
+  }
+  a {
+    color: whitesmoke;
+  }
+  .head-title {
+    text-align: center;
+    margin-top: -2em;
+    margin-bottom: 2em;
+  }
+  .cards {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .cards .card {
+    border: 1px solid #8f8e6b;
+    margin-bottom: 1em;
+    width: 80vw;
+    background-color: #eeddcc;
+    padding: 1em;
+    border-radius: 1em;
+    color: white;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .cards .card h2 {
+    color: rgb(194, 78, 78);
+    height: 5%;
+    font-size: 1.8em;
+  }
+  .cards .card p {
+    color: #5e6d86;
+    height: 20%;
+    font-size: 1.3em;
+  }
+  .cards .card img {
+    width: 95%;
+    height: 50%;
+    border-radius: 1em;
+  }
+  .cards .card .card-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 10%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100%;
+  }
+  .cards .card .card-buttons a {
+    width: 30%;
+    background-color: rgb(194, 78, 78);
+    font-weight: 700;
+    height: 100%;
+    padding: 0 0.7em;
+    padding-top: 0.7em;
+    padding-bottom: -0.3em;
+    border-radius: 10px 10px 10px 10px;
+    color: whitesmoke;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1em 0.5em 1em 0.5em;
+  }
+  .cards .card .card-buttons a:hover {
+    opacity: 0.7;
+  }
+  .cards .card:hover {
+    -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.507);
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.507);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+}
+main {
+  min-height: 64vh;
+}
+
+footer {
+  width: 100vw;
+  height: 2em;
+  padding: 0;
+  margin-top: 2em;
+}
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100%;
+  padding: 0.8em 0;
+  margin: 0;
+  background-color: black;
+}
+footer ul li {
+  list-style-type: none;
+  font-weight: 1000;
+  color: white;
+}
